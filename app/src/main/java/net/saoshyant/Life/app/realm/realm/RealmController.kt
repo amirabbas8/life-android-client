@@ -15,7 +15,7 @@ class RealmController {
     val posts: RealmResults<Post>
         get() = realm.where<Post>(Post::class.java).findAll()
 
-    //Refresh the realm istance
+    //Refresh the realm instance
     fun refresh() {
 
         realm.refresh()
@@ -38,13 +38,13 @@ class RealmController {
     //check if Post.class is empty
     fun hasPosts(): Boolean {
 
-        return !realm.where<Post>(Post::class.java!!).findAll().isEmpty()
+        return !realm.where<Post>(Post::class.java).findAll().isEmpty()
     }
 
     //query example
     fun queryedPosts(): RealmResults<Post> {
 
-        return realm.where<Post>(Post::class.java!!)
+        return realm.where<Post>(Post::class.java)
                 .contains("author", "Author 0")
                 .or()
                 .contains("title", "Realm")
