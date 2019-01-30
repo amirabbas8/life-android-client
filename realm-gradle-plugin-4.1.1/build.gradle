@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('realm-gradle-plugin-4.1.1.jar'))
