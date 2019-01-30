@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--share-->
+    <RelativeLayout
+        android:id="@+id/rlt_share"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/have_drafts"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/bg_screen1"
+            android:gravity="center_vertical|clip_horizontal"
+            android:text="@string/see_your_drafts"
+
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <android.support.v4.widget.Space
+            android:id="@+id/space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/have_drafts" />
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/location"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/space"
+            android:gravity="top"
+            android:hint="@string/insertText"
+            android:maxLength="140"
+            android:textSize="20sp" />
+        <TextView
+
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/rl1" />
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/upload_image"
+                android:src="@drawable/ic_add_a_photo" />
+
+
+            <ImageView
+                android:id="@+id/video"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/send"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@id/image"
+                android:contentDescription="@string/upload_video"
+                android:src="@drawable/ic_video" />
+
+            <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_location"
+                android:layout_alignTop="@+id/video"
+                android:layout_toEndOf="@+id/video"/>
+
+
+
+            <ImageView
+                android:id="@+id/send"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/yes_icon" />
+
+
+            <ProgressBar
+                android:id="@+id/prg_share"
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/send"
+                android:layout_alignEnd="@+id/send"
+                android:layout_alignStart="@+id/send"
+                android:layout_alignTop="@+id/send"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

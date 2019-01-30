@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "243817315761",
+    "project_id": "Life-9be4a"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243817315761:android:84d47b48476744b3",
+        "android_client_info": {
+          "package_name": "net.saoshyant.Life"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv4LnlNVYSTWkZpAyhY2dM4OZlkOiadTo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-77786704-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

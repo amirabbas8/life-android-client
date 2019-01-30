@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 android:id="@+id/coordinatorLayout"
+                                                 android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimaryDark"
+        android:enabled="false"
+        android:text="@string/app_name" />
+
+    <ImageButton
+        android:id="@+id/btnLogin"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimaryDark"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tick_icon" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignStart="@+id/btnLogin"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimaryDark"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button2"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/insertpfn"
+        android:textSize="16sp" android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_realname"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@+id/textView1"
+        android:layout_alignStart="@+id/textView1"
+        android:layout_marginTop="30dp" android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:hint="@string/name" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_frequency"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@+id/input_layout_realname"
+        android:layout_alignStart="@+id/input_layout_realname"
+        android:layout_marginTop="44dp" android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/edt_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="textPersonName"
+            android:hint="@string/username" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@+id/input_layout_frequency"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp">
+
+        <EditText
+            android:id="@+id/inputpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change country"
+        android:id="@+id/changeCountry"
+        android:background="@color/design_fab_stroke_end_inner_color"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

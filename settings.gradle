@@ -1,0 +1,2 @@
+include ':app', ':croppers', ':video-trimmer'
+project(':croppers').projectDir = new File('cropper')

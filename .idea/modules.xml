@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Life.iml" filepath="$PROJECT_DIR$/Life.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cropper/croppers.iml" filepath="$PROJECT_DIR$/cropper/croppers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-trimmer/video-trimmer.iml" filepath="$PROJECT_DIR$/video-trimmer/video-trimmer.iml" />
+    </modules>
+  </component>
+</project>

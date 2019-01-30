@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_fab_stroke_end_inner_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimaryDark"
+            android:enabled="false"
+            android:text="@string/app_name" />
+
+        <ImageButton
+            android:id="@+id/btnLogin"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimaryDark"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tick_icon" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/btnLogin"
+            android:background="?attr/colorPrimaryDark"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button2"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/insertname"
+            android:textSize="16sp" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_realname"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignStart="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="67dp">
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:maxLines="1"
+                android:lines="1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignStart="@+id/input_layout_realname"
+            android:layout_below="@+id/input_layout_realname"
+            android:layout_marginTop="44dp">
+
+            <EditText
+                android:id="@+id/edt_id"
+                android:hint="@string/username"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:lines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <ir.adad.client.Banner
+            android:id="@+id/banner_ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

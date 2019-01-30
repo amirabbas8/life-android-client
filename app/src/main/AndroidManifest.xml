@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.saoshyant.Life">
+
+    <uses-sdk tools:overrideLibrary="co.ronash.pushe" />
+
+    <uses-permission android:name="net.saoshyant.Life.permission.C2D_MESSAGE" />
+
+    <permission
+        android:name="net.saoshyant.Life.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Optional permissions -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme"
+        tools:replace="android:allowBackup">
+        <!--<receiver android:name="co.ronash.pushe.receiver.UpdateReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.PACKAGE_REPLACED" />-->
+
+                <!--<data-->
+                    <!--android:path="net.saoshyant.Life"-->
+                    <!--android:scheme="package" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver-->
+            <!--android:name="com.google.android.gms.gcm.GcmReceiver"-->
+            <!--android:exported="true"-->
+            <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+                <!--<action android:name="com.google.android.c2dm.intent.REGISTRATION" />-->
+
+                <!--<category android:name="net.saoshyant.Life" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <meta-data
+            android:name="co.ronash.pushe.token"
+            android:value="PUSHE_202951390664" />
+        <meta-data
+            android:name="co.ronash.pushe.cr"
+            android:value="aHR0cDovLzU3YmFhYTU3Y2FhYjQyODA4YTg1ZDgxYjY2YzUwYjViOjRlYjdlMDQ5OGFkYTRmYTQ4N2E5NjRjMGI0MTBlNWFkQGNhLnB1c2hlLmlyLzMzMjY=" />
+        <meta-data
+            android:name="AdadTestMode"
+            android:value="false" />
+        <meta-data
+            android:name="AdadToken"
+            android:value="9a835dc630874828873cb22f93f3ae28" />
+        <meta-data
+            android:name="AdadLogging"
+            android:value="false" />
+        <meta-data
+            android:name="AdadBannersEnabledOnStart"
+            android:value="true" />
+        <meta-data
+            android:name="AdadShowRemoveAds"
+            android:value="false" />
+
+        <activity
+            android:name="ir.adad.client.AdadActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".activity.Main"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Profile"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyMaterialTheme.NoActionbar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="saoshyant.net"
+                    android:scheme="lifepro" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HashTag"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="saoshyant.net"
+                    android:scheme="lifehash" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Policies"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.About"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.Drafts"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.Notification"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.Following"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.Follower"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.Likes"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.TrimmerActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.VideoPlayer"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".activity.update3"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".activity.OldSend"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="croppers.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ec43395103aaed0e81a94fe9cf8ae9467b02098e" />
+
+        <activity
+            android:name=".activity.PostActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.EditProfile"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".activity.AddPost" />
+        <activity android:name=".activity.Gallery" />
+        <activity android:name=".activity.OpenGallery" />
+        <activity android:name="com.tangxiaolv.telegramgallery.GalleryActivity" />
+    </application>
+
+</manifest>

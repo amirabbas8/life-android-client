@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_fab_stroke_end_inner_color">
+
+    <TextView
+        android:id="@+id/hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:text="@string/salam"
+        android:textAlignment="center"
+        android:textColor="@color/design_fab_shadow_start_color"
+        android:textSize="50sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlt_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView1"
+        android:layout_alignStart="@+id/imageView1"
+        android:layout_below="@+id/imageView1">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/version"
+            android:textAlignment="center"
+            android:textColor="@color/design_fab_shadow_start_color"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/exdatela"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/exDateBg"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/download"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:text="@string/download" />
+
+        <TextView
+            android:id="@+id/exdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/download"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:text="@string/exdate"
+            android:textAlignment="center"
+            android:textIsSelectable="false"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exdatela"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="@string/present"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/design_fab_shadow_start_color"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher" />
+
+
+</RelativeLayout>

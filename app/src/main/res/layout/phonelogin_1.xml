@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.VisibilityAwareImageButton
+            android:id="@+id/btnLogin"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignStart="@+id/progressBar1"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_done_black" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignTop="@+id/phone"
+            android:layout_toEndOf="@+id/phone"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/login1txt"
+            android:textColor="#212121"
+            android:textSize="17sp" />
+
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="@string/def_number"
+            android:inputType="phone"
+            android:textColor="?attr/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/changeCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/banner_ad_view"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/change_country"
+            android:textAlignment="center" />
+
+        <ir.adad.client.Banner
+            android:id="@+id/banner_ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
