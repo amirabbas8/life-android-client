@@ -25,6 +25,11 @@ android {
         versionCode 5
         versionName "0.5"
     }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
     buildTypes {
         release {
             minifyEnabled true

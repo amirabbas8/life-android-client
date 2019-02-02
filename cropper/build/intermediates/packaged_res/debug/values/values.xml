@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="crop_image_menu_crop" type="drawable"/>
+    <string name="crop_image_activity_title" translatable="false"/>
+    <string name="crop_image_menu_crop" translatable="false">Crop</string>
+    <string name="crop_image_menu_flip" translatable="false">Flip</string>
+    <string name="crop_image_menu_flip_horizontally" translatable="false">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically" translatable="false">Flip vertically</string>
+    <string name="crop_image_menu_rotate_left" translatable="false">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right" translatable="false">Rotate</string>
+    <string name="pick_image_intent_chooser_title" translatable="false">Select source</string>
     <declare-styleable name="CropImageView">
         <attr name="cropGuidelines">
             <enum name="off" value="0"/>
@@ -46,13 +55,4 @@
         <attr format="boolean" name="cropFlipHorizontally"/>
         <attr format="boolean" name="cropFlipVertically"/>
     </declare-styleable>
-    <item name="crop_image_menu_crop" type="drawable"/>
-    <string name="crop_image_activity_title" translatable="false"/>
-    <string name="crop_image_menu_crop" translatable="false">Crop</string>
-    <string name="crop_image_menu_flip" translatable="false">Flip</string>
-    <string name="crop_image_menu_flip_horizontally" translatable="false">Flip horizontally</string>
-    <string name="crop_image_menu_flip_vertically" translatable="false">Flip vertically</string>
-    <string name="crop_image_menu_rotate_left" translatable="false">Rotate counter clockwise</string>
-    <string name="crop_image_menu_rotate_right" translatable="false">Rotate</string>
-    <string name="pick_image_intent_chooser_title" translatable="false">Select source</string>
 </resources>

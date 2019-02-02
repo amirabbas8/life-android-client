@@ -24,28 +24,29 @@
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme"
         tools:replace="android:allowBackup">
         <!--<receiver android:name="co.ronash.pushe.receiver.UpdateReceiver">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.PACKAGE_REPLACED" />-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.PACKAGE_REPLACED" />-->
 
-                <!--<data-->
-                    <!--android:path="net.saoshyant.Life"-->
-                    <!--android:scheme="package" />-->
-            <!--</intent-filter>-->
+        <!--<data-->
+        <!--android:path="net.saoshyant.Life"-->
+        <!--android:scheme="package" />-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
         <!--<receiver-->
-            <!--android:name="com.google.android.gms.gcm.GcmReceiver"-->
-            <!--android:exported="true"-->
-            <!--android:permission="com.google.android.c2dm.permission.SEND">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
-                <!--<action android:name="com.google.android.c2dm.intent.REGISTRATION" />-->
+        <!--android:name="com.google.android.gms.gcm.GcmReceiver"-->
+        <!--android:exported="true"-->
+        <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+        <!--<action android:name="com.google.android.c2dm.intent.REGISTRATION" />-->
 
-                <!--<category android:name="net.saoshyant.Life" />-->
-            <!--</intent-filter>-->
+        <!--<category android:name="net.saoshyant.Life" />-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
 
         <meta-data
