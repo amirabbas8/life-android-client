@@ -150,9 +150,6 @@
             android:name=".activity.SignUpActivity"
             android:theme="@style/AppTheme.Dark" />
         <activity
-            android:name=".activity.update3"
-            android:theme="@style/AppTheme.Dark" />
-        <activity
             android:name=".activity.OldSend"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize">

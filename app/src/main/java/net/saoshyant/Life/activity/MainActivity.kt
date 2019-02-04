@@ -71,7 +71,6 @@ class MainActivity : AppCompatActivity() {
         tabLayout = findViewById(R.id.tabs)
         tabLayout!!.setupWithViewPager(viewPager)
         setupTabIcons()
-        update()
     }
 
     private fun setupToolbar() {
@@ -429,59 +428,6 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    fun update() {
-        val db1 = DatabaseHandler(applicationContext)
-
-        val user = db1.userDetails
-        val params = HashMap<String, String>()
-        params["tag"] = "update"
-        params["id"] = user["idNo"].orEmpty()
-        params["code"] = user["code"].orEmpty()
-        val strReq = object : StringRequest(Request.Method.POST, "http://saoshyant.net/Life/update.php", Response.Listener { response ->
-            //response from the server
-            //Log.e("username: ", response);
-            try {
-                val responseObj = JSONObject(response)
-                val feedArray = responseObj.getJSONArray("user")
-                val feedObj = feedArray.get(0) as JSONObject
-
-                if (feedObj.getInt("success") == 1) {
-                    if (feedObj.getBoolean("pass")) {
-                        val intent = Intent(this@MainActivity, update3::class.java)
-                        intent.putExtra("id", user["idNo"])
-                        intent.putExtra("code", user["code"])
-                        intent.putExtra("username", feedObj.getString("username"))
-                        intent.putExtra("phone", feedObj.getString("phone"))
-                        startActivity(intent)
-                        finish()
-                    }
-
-                }
-
-
-            } catch (e: JSONException) {
-                //  Toast.makeText(getApplicationContext(), "Error2: " + e.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        },
-                Response.ErrorListener {
-                    //  Log.e(TAG, "Error1: " + error.getMessage());
-                }
-        ) {
-            @Throws(com.android.volley.AuthFailureError::class)
-            override fun getHeaders(): Map<String, String> {
-                val params = HashMap<String, String>()
-                params["Authorization: Basic"] = ""
-                return params
-            }
-
-            override fun getParams(): Map<String, String> {
-                // Log.e(TAG, "Posting params: " + params.toString());
-                return params
-            }
-        }
-        // Adding request to request queue
-        MyApplication.instance!!.addToRequestQueue(strReq)
-    }
 
     companion object {
 
