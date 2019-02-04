@@ -66,7 +66,7 @@ class SignUpActivity : AppCompatActivity() {
         progressDialog.isIndeterminate = true
         progressDialog.setMessage("Creating Account...")
         progressDialog.show()
-        val password = passwordText!!.text.toString() + "albag"
+        val password = passwordText!!.text.toString()
 
 
         var md: MessageDigest? = null

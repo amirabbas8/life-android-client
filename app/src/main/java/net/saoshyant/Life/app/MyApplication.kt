@@ -51,9 +51,10 @@ class MyApplication : Application() {
         Realm.init(this)
         val realmConfiguration = RealmConfiguration.Builder()
                 .name(Realm.DEFAULT_REALM_NAME)
-                .schemaVersion(0)
+                .schemaVersion(1)
                 .deleteRealmIfMigrationNeeded()
                 .build()
+        Realm.getInstance(realmConfiguration)
         Realm.setDefaultConfiguration(realmConfiguration)
     }
 

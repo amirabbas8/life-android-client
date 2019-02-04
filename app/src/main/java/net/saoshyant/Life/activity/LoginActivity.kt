@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
 //        progressDialog.isIndeterminate = true
 //        progressDialog.visibility = View.VISIBLE
 
-        val password = passwordText!!.text.toString() + "albag"
+        val password = passwordText!!.text.toString()
 
         var md: MessageDigest? = null
         try {

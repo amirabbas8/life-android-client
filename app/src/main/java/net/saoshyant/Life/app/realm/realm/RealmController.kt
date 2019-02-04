@@ -38,7 +38,7 @@ class RealmController {
     //check if Post.class is empty
     fun hasPosts(): Boolean {
 
-        return !realm.where<Post>(Post::class.java).findAll().isEmpty()
+        return !realm.where(Post::class.java).findAll().isEmpty()
     }
 
     //query example

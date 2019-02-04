@@ -9,8 +9,8 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
 apply plugin: 'realm-android'
+apply plugin: 'io.fabric'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'

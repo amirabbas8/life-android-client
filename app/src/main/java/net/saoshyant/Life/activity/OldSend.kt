@@ -90,10 +90,10 @@ class OldSend : AppCompatActivity() {
         two.start()
         setupShare()
         setupShare()
-        if (RealmController.with(this).hasPosts()) {
-            haveDrafts.visibility = View.VISIBLE
-            haveDrafts.setOnClickListener { startActivityForResult(Intent(this@OldSend, Drafts::class.java), 3) }
-        }
+//        if (RealmController.with(this).hasPosts()) {
+//            haveDrafts.visibility = View.VISIBLE
+//            haveDrafts.setOnClickListener { startActivityForResult(Intent(this@OldSend, Drafts::class.java), 3) }
+//        }
 
 
     }
